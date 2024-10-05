@@ -25,6 +25,20 @@
 		"name": "",
 		"logo": "../images/Mesadetrabajo1.png"
 }</script>
+
+  <script>
+    // Desactivar clic derecho
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+    // Deshabilitar algunas combinaciones de teclas
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I') || (e.ctrlKey && e.key === 'U')) {
+        e.preventDefault();
+      }
+    });
+  </script>
   <meta name="theme-color" content="#478ac9">
   <meta property="og:title" content="Servicios">
   <meta property="og:type" content="website">
